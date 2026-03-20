@@ -1,0 +1,11 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Single Page Application (SPA) routing
+# This ensures that any route requests (like /jobs or /inventory) 
+# are redirected to index.html instead of returning a 404 error.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
